@@ -129,8 +129,11 @@
             },
             'VCLinkerTool': {
               # Chrome builds with this minimum environment which changes the
-              # values returned from APIs like GetSystemMetrics(SM_CXSIZEFRAME)
-              'MinimumRequiredVersion': '5.02'
+              # values returned from certain APIs like GetSystemMetrics(SM_CXSIZEFRAME)
+              # The following two settings translate to a linker flag
+              # of /SUBSYSTEM:WINDOWS,5.02
+              'MinimumRequiredVersion': '5.02',
+              'SubSystem': '2',
             },
           },
           'copies': [
